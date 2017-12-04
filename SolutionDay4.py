@@ -5,7 +5,7 @@ for i in range(0, 512):		#size of given input
 	count += 1				#add one to note number read
 	for j in range(len(arr)):
 		temp = arr.pop()	#remove the element
-		if temp in arr:		#if it's still in the list its a dupe
+		if temp in arr:		#if it's still in the list it's a dupe
 			count -= 1		#decrement count b/c we want only unique elements
 			break
 print(count)
