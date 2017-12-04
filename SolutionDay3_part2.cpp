@@ -3,11 +3,11 @@
 #include <vector>
 using namespace std;
 
-
+//used to recreate the matrix from the problem
 typedef struct Matrix
 {
 public:
-	vector< vector<int> > mat;
+	vector< vector<int> > mat;// vectors better than int** :)
 	Matrix(int size)
 	{
 		for(int i = 0; i < size; i++)
@@ -30,6 +30,8 @@ public:
 		cout << endl;
 	}
 
+	//fills the matrix with numbers who are sums of their adjacent values
+	//but goes in order in compliance with the problem
 	void fillWithAdjSum(int bound)
 	{
 		int temp = 0;
@@ -63,7 +65,7 @@ public:
 			counter++;
 		}
 	}
-
+	//helper for above
 	void fillMemberWithAdjSum(int x, int y, int &t)
 	{
 		t = mat[x-1][y-1] + mat[x-1][y] + mat[x-1][y+1] + 
